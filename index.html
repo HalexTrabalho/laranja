@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Trajetória do Maior Laranja | Experiência Interativa</title>
+    <!-- Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons para ícones modernos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-red-500 selection:text-white">
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <!-- Simulação de fundo dramático -->
+            <div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=2071')] bg-cover bg-center opacity-40"></div>
+        </div>
+        
+        <div class="relative z-20 text-center px-4 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
+                Você é o Homem Mais <span class="text-red-500">Rico</span> do Brasil...
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-8 font-light">
+                Mas você não tem <span class="italic">absolutamente nada</span>.
+            </p>
+            <a href="#começo" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 inline-block">
+                Descubra como começou
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-slate-500"></i>
+        </div>
+    </header>
+
+    <!-- O Início -->
+    <section id="começo" class="py-24 px-4 bg-slate-900">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold mb-6 text-red-500">Tudo começou com R$ 800</h2>
+                <p class="text-lg text-slate-300 mb-4">
+                    Você tinha 23 anos, morava num quarto alugado em Guarulhos e trabalhava como operador de caixa. 
+                    O favor parecia simples: emprestar uma conta bancária para um primo.
+                </p>
+                <div class="bg-slate-800 p-6 rounded-xl border-l-4 border-red-600">
+                    <p class="italic text-slate-400">"É seguro? É legal?"</p>
+                    <p class="font-bold text-white mt-2">"Claro que sim. Todo mundo faz."</p>
+                </div>
+            </div>
+            <div class="reveal delay-200">
+                <div class="bg-gradient-to-br from-red-900/20 to-slate-800 p-8 rounded-3xl border border-slate-700 shadow-2xl">
+                    <div class="flex justify-between items-center mb-8">
+                        <span class="text-slate-400">Status Financeiro Inicial</span>
+                        <i data-lucide="wallet" class="text-red-500"></i>
+                    </div>
+                    <div class="text-4xl font-mono font-bold text-white mb-2">R$ 800,00</div>
+                    <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                        <div class="bg-red-600 h-full w-2 transition-all duration-1000"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-4 uppercase tracking-widest">Apenas um favor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Império de Papel -->
+    <section class="py-24 px-4">
+        <div class="max-w-6xl mx-auto text-center mb-16 reveal">
+            <h2 class="text-4xl font-bold mb-4">O Império que Não é Seu</h2>
+            <p class="text-slate-400">Em poucos anos, o seu nome assinou o impossível.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Card 1 -->
+            <div class="reveal bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-red-600/50 transition-colors">
+                <i data-lucide="building-2" class="w-12 h-12 text-red-500 mb-6"></i>
+                <h3 class="text-2xl font-bold mb-3">87 Empresas</h3>
+                <p class="text-slate-400">Transportadoras, consultorias e importadoras. Todas fantasmas.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="reveal delay-100 bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-red-600/50 transition-colors">
+                <i data-lucide="fuel" class="w-12 h-12 text-red-500 mb-6"></i>
+                <h3 class="text-2xl font-bold mb-3">6 Postos de Gasolina</h3>
+                <p class="text-slate-400">Patrimônio físico avaliado em milhões. Você só visitou um uma vez.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="reveal delay-200 bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-red-600/50 transition-colors">
+                <i data-lucide="plane" class="w-12 h-12 text-red-500 mb-6"></i>
+                <h3 class="text-2xl font-bold mb-3">Helicóptero</h3>
+                <p class="text-slate-400">Um Airbus H125 de R$ 4.2 milhões. Registrado no seu CPF em Campinas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estatísticas de Impacto -->
+    <section class="py-24 bg-red-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <h2 class="text-4xl font-black mb-6 uppercase">A Escala do Abismo</h2>
+                <p class="text-xl mb-8 opacity-90">
+                    O dinheiro circulava entre fantasmas e saía limpo do outro lado. 
+                    Você era a assinatura que legitimava o crime.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 reveal">
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="text-3xl font-bold">R$ 1.3Bi</div>
+                    <div class="text-sm opacity-80 uppercase tracking-tighter">Notas Fiscais Emitidas</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="text-3xl font-bold">16 Anos</div>
+                    <div class="text-sm opacity-80 uppercase tracking-tighter">Pena Máxima</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="text-3xl font-bold">40</div>
+                    <div class="text-sm opacity-80 uppercase tracking-tighter">Ônibus em Frota</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="text-3xl font-bold">0</div>
+                    <div class="text-sm opacity-80 uppercase tracking-tighter">Controle Real</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Refletir -->
+    <section class="py-24 px-4 text-center">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="text-4xl font-bold mb-6">Poderia ser você?</h2>
+            <p class="text-slate-400 mb-10 text-lg">
+                O maior laranja do Brasil não era um gênio do crime. 
+                Era alguém que queria uma vida melhor e disse "sim" para o favor errado.
+            </p>
+            <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800">
+                <!--<h4 class="text-xl font-bold mb-4">Você já emprestou seu CPF ou conta por "favor"?</h4>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <button class="bg-slate-800 hover:bg-red-600 px-6 py-3 rounded-xl transition-all">Sim, já fiz isso</button>
+                    <button class="bg-slate-800 hover:bg-green-600 px-6 py-3 rounded-xl transition-all">Nunca, tenho medo</button>
+                    <button class="bg-slate-800 hover:bg-slate-700 px-6 py-3 rounded-xl transition-all">Fiquei na dúvida</button>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-900 text-center text-slate-500">
+        <p>&copy Halex system&reg</p>
+        <p class="text-xs mt-2 italic">Aviso: Ser "laranja" é crime de lavagem de dinheiro e participação em organização criminosa.</p>
+    </footer>
+
+    <script>
+        // Inicializar ícones
+        lucide.createIcons();
+
+        // Efeito de Revelação ao Rolar
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Chamar uma vez para itens já visíveis
+        reveal();
+    </script>
+</body>
+</html>
